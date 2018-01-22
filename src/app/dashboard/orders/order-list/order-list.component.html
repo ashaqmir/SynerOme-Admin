@@ -1,0 +1,23 @@
+<div class="content-wrapper" style="min-height: 706px;">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+
+    <div class="box box-primary box-solid">
+      <div class="box-header with-border">
+        <h1 class="box-title">Products</h1>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-social-icon btn-primary">
+            <i class="fa fa-plus-square"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div *ngFor="let order of orders | async" class="row">
+      <app-order-details [order]='order'></app-order-details>
+    </div>
+  </section>
+</div>

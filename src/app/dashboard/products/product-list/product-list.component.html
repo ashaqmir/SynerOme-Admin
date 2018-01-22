@@ -1,0 +1,24 @@
+<div class="content-wrapper" style="min-height: 706px;">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+
+    <div class="box box-primary box-solid">
+      <div class="box-header with-border">
+        <h1 class="box-title">Products</h1>
+        <div class="box-tools pull-right">      
+          <button type="button" class="btn btn-social-icon btn-primary"(click)="addProduct()">
+            <i class="fa fa-plus-square"></i>
+          </button>         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div *ngFor="let product of products | async" class="row">
+      <app-product-details [product]='product'></app-product-details>
+    </div>
+
+  </section>
+</div>

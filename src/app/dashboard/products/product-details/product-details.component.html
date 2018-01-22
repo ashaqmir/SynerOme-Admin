@@ -1,0 +1,130 @@
+<div class="col-md-12 col-xs-12 col-lg-12">
+  <div class="box box-warning box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{product.name}}</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool">
+          <i class="fa  fa-edit"(click)="editProduct()" ></i>
+        </button>
+        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="row">
+
+        <!-- /.col -->
+        <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+
+          <div class="box box-warning">
+            <div class="box-header with-border">
+              <h3 class="box-title">Product Description</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                  <i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              {{product.shortDescription}}
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+          <div class="box box-warning">
+            <div class="box-header with-border">
+              <h3 class="box-title">Product Long Description</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              {{product.longDescriptions}}
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+          <table class="table table-bordered">
+            <tbody *ngIf="product.features">
+              <tr>
+                <th>Features</th>
+              </tr>
+              <tr *ngFor="let ftr of product.features">
+                <td>{{ftr}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <tbody *ngIf="product.additionalfeatures">
+              <tr>
+                <th>Aditional Features</th>
+              </tr>
+              <tr *ngFor="let ftr of product.additionalfeatures">
+                <td>{{ftr}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- ./box-body -->
+    <div class="box-footer">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{product.currency}}</h5>
+            <span class="description-text">CURRENCY</span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{product.price}}</h5>
+            <span class="description-text">PRICE</span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{product.discount}}</h5>
+            <span class="description-text">DISCOUNT</span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{product.discountPrice}}</h5>
+            <span class="description-text">DISCOUNTED PRICE</span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{product.taxPer}}</h5>
+            <span class="description-text">TAX</span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{totalPrice}}</h5>
+            <span class="description-text">CUSTOMER PAYS</span>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.box-footer -->
+  </div>
+  <!-- /.box -->
+</div>

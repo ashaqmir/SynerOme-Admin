@@ -1,0 +1,125 @@
+<div class="col-md-12 col-xs-12 col-lg-12">
+  <div class="box box-warning box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">{{order.productReference}}</h3>
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="row">
+
+        <!-- /.col -->
+        <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+          <div class="box box-warning">
+            <div class="box-header with-border">
+              <h3 class="box-title">Customer Details</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                  <i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <b>Email</b>
+                  <a class="pull-right">{{order.userMail}}</a>
+                </li>
+                <li class="list-group-item">
+                  <b>UID</b>
+                  <a class="pull-right">{{order.userID}}</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+          <div class="box box-warning">
+            <div class="box-header with-border">
+              <h3 class="box-title">Shipping Address</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <b>Street</b>
+                  <a class="pull-right">{{order.shippingAddress.street}}</a>
+                </li>
+                <li class="list-group-item">
+                  <b>City</b>
+                  <a class="pull-right">{{order.shippingAddress.city}}</a>
+                </li>
+                <li class="list-group-item">
+                  <b>Country</b>
+                  <a class="pull-right">{{order.shippingAddress.region}}</a>
+                </li>
+                <li class="list-group-item">
+                  <b>Region</b>
+                  <a class="pull-right">{{order.shippingAddress.country}}</a>
+                </li>
+                <li class="list-group-item">
+                  <b>ZIP</b>
+                  <a class="pull-right">{{order.shippingAddress.zip}}</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+          <div style="text-align:center">
+            <div class="btn-group-vertical">
+              <button type="button" class="btn btn-success btn-lg"><i class="fa fa fa-play"></i> Fullfill</button>
+              <button type="button" class="btn btn-danger btn-lg"><i class="fa fa-repeat"></i> Refund</button>
+              <button type="button" class="btn btn-warning btn-lg"><i class="fa fa-check-square-o"></i> Complete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- ./box-body -->
+    <div class="box-footer">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{order.price}}</h5>
+            <span class="description-text">PRICE</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{order.tax}}</h5>
+            <span class="description-text">TAX</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="description-block border-right">
+            <h5 class="description-header">{{order.amountPaid}}</h5>
+            <span class="description-text">CUSTOMER PAID</span>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.box-footer -->
+  </div>
+  <!-- /.box -->
+</div>
